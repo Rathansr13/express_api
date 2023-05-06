@@ -38,7 +38,7 @@ app.post('/api/courses',(req,res)=>{
     console.log(result);
     if(result.error)
     {
-        res.status(400).send("name is not valid")
+        res.status(400).send("name is not valid enter valid")
     }
    const cours={
     id:courses.length+1,
