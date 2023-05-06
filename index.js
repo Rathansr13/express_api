@@ -54,7 +54,7 @@ app.put('/api/courses/:id',(req,res)=>{
     //if not existing return error
     const course=courses.find(c=>c.id===parseInt(req.params.id));
     if(!course)
-    res.status(404).send("not found")
+    res.status(404).send("not found wrong choice")
 
     const schema={
         name : Joi.string().min(3).required()
