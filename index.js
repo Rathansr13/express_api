@@ -38,7 +38,7 @@ app.post('/api/courses',(req,res)=>{
     console.log(result);
     if(result.error)
     {
-        res.status(400).send("name")
+        res.status(400).send("name is not valid")
     }
    const cours={
     id:courses.length+1,
@@ -62,8 +62,9 @@ app.put('/api/courses/:id',(req,res)=>{
     const result = Joi.validate(req.body,schema)
     if(result.error)
 {
-    res.status(404).send("not valid")
+    res.status(404).send("not valid enter valid")
 }
+
 
 courses.name = req.body.name;
 res.send(courses)
